@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGear Store | Đặt hàng</title>
+</head>
+<body bgcolor="#060D10" text="#FFFFFF" link="#87DF2C" vlink="#B4B4B2" alink="#FFFFFF">
+
+<header>
+    <table bgcolor="#27403E" border="0" cellpadding="12" cellspacing="0" width="100%">
+        <tr>
+        <td width="100" align="center">
+            <a href="index.html"><img src="images/logo.svg" width="72" alt="Logo TechGear Store"></a>
+        </td>
+        <td align="left" valign="middle">
+            <font color="#FFFFFF" size="6"><b>TECHGEAR STORE</b></font><br>
+            <font color="#87DF2C" size="3"><b>SMART ACCESSORIES - SMART CHOICE</b></font><br>
+            <font color="#B4B4B2" size="2">Cửa hàng phụ kiện công nghệ
+            cho sinh viên, dân văn phòng và game thủ</font>
+        </td>
+        </tr>
+    </table>
+    <table bgcolor="#21A691" border="0" cellpadding="10" cellspacing="0" width="100%">
+        <tr>
+        <td align="center">
+        <nav aria-label="Điều hướng chính"><font color="#060D10">
+            <a href="index.html"><font color="#060D10"><b>Trang chủ</b></font></a> |
+            <a href="index.html#san-pham"><font color="#060D10"><b>Sản phẩm</b></font></a> |
+            <a href="chi-tiet.html"><font color="#060D10"><b>Chi tiết</b></font></a> |
+            <a href="bang-gia.html"><font color="#060D10"><b>Bảng tổng hợp</b></font></a> |
+            <a href="dat-hang.html"><font color="#060D10"><b>Đặt hàng</b></font></a>
+        </font></nav>
+        </td>
+        </tr>
+    </table>
+</header>
+
+<main>
+    <h1>Đặt hàng</h1>
+    <p><strong>Lưu ý:</strong> chỉ mang tính minh họa, không lưu đơn hàng thật.</p>
+
+    <table bgcolor="#27403E" border="0" cellpadding="16" cellspacing="0" width="100%">
+    <tr><td>
+    <form id="form-dat-hang" action="xac-nhan.html" method="get">
+        <fieldset>
+            <legend><font color="#87DF2C"><b>Thông tin người đặt</b></font></legend>
+            <p><label for="ho-ten">Họ tên*</label><br>
+            <input type="text" id="ho-ten" name="hoTen" minlength="2" maxlength="60" placeholder="Nguyen Van A" required></p>
+            <p><label for="email">Email*</label><br>
+            <input type="email" id="email" name="email" placeholder="demo@example.com" required></p>
+            <p><label for="dien-thoai">Số điện thoại (10 chữ số)</label><br>
+            <input type="tel" id="dien-thoai" name="dienThoai" pattern="0[0-9]{9}" title="Nhập 10 chữ số, bắt đầu bằng 0" placeholder="0123456789"></p>
+            <p><label for="dia-chi">Địa chỉ nhận hàng*</label><br>
+            <input type="text" id="dia-chi" name="diaChi" minlength="3" maxlength="120" size="40" placeholder="Số nhà, đường, quận" required> </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><font color="#87DF2C"><b>Sản phẩm muốn đặt</b></font></legend>
+            <p><label for="san-pham">Sản phẩm *</label><br>
+            <select id="san-pham" name="maSanPham" required>
+                <option value="">-- Chọn sản phẩm --</option>
+                <option value="SP01">SP01 - Aula Nova 75 (600.000 đ)</option>
+                <option value="SP02">SP02 - EDRA EK3287 Rainbow (800.000 đ)</option>
+                <option value="SP03">SP03 - Logitech M221 Silent (200.000 đ)</option>
+                <option value="SP04">SP04 - XUNFOX H3 (590.000 đ)</option>
+                <option value="SP05">SP05 - Bluetooth OWS OS-Baseus (1.290.000 đ)</option>
+                <option value="SP06">SP06 - Logitech LIGHTSPEED G733 (850.000 đ)</option>
+                <option value="SP07">SP07 - Edifier G5000 (2.499.999 đ)</option>
+                <option value="SP08">SP08 - Sạc nhanh GaN 25W (139.999 đ)</option>
+                <option value="SP09">SP09 - Ugreen 30W PB632 (720.000 đ)</option>
+                <option value="SP10">SP10 - SSD di động 500GB (8.089.999 đ)</option>
+                <option value="SP11">SP11 - Hub USB-C 7 trong 1 (650.000 đ)</option>
+            </select></p>
+            <p><label for="mau-sac">Màu sắc / phiên bản</label><br>
+            <select id="mau-sac" name="mauSac">
+                <option value="theo-mo-ta">Theo mô tả sản phẩm</option>
+                <option value="den">Đen</option>
+                <option value="trang">Trắng</option>
+                <option value="bac">Bạc / Xám bạc</option>
+                <option value="xanh">Xanh / Xanh đen</option>
+                <option value="do">Đỏ</option>
+            </select></p>
+            <p><label for="so-luong">Số lượng (1 đến 5) *</label><br>
+            <input type="number" id="so-luong" name="soLuong" min="1" max="5" step="1" value="1" required></p>
+            <p><label for="ngay-nhan">Ngày muốn nhận</label><br>
+            <input type="date" id="ngay-nhan" name="ngayNhan"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend><font color="#87DF2C"><b>Hình thức nhận hàng *</b></font></legend>
+            <label><input type="radio" name="nhanHang" value="tai-cua-hang" required> Nhận tại cửa hàng</label><br>
+            <label><input type="radio" name="nhanHang" value="giao-tan-noi"> Giao nhanh tận nơi</label><br>
+            <label><input type="radio" name="nhanHang" value="giao-nhanh"> Hỏa tốc trong ngày</label>
+        </fieldset>
+
+        <fieldset>
+            <legend><font color="#87DF2C"><b>Dịch vụ thêm (có thể chọn nhiều)</b></font></legend>
+            <label><input type="checkbox" name="dichVu" value="bao-hanh-mo-rong"> Bảo hành mở rộng thêm 12 tháng</label><br>
+            <label><input type="checkbox" name="dichVu" value="goi-qua"> Gói quà tặng</label><br>
+            <label><input type="checkbox" name="dichVu" value="nhan-khuyen-mai"> Nhận thông tin khuyến mãi</label>
+        </fieldset>
+
+        <fieldset>
+            <legend><font color="#87DF2C"><b>Ghi chú</b></font></legend>
+            <p><label for="ghi-chu">Nội dung ghi chú</label><br>
+            <textarea id="ghi-chu" name="ghiChu" rows="4" cols="45" maxlength="300" placeholder="Ví dụ: giao giờ hành chính (không bắt buộc)"></textarea></p>
+            <p><label><input type="checkbox" name="dongY" value="yes" required> Tôi hiểu đây chỉ là form demo, không tạo đơn hàng thật *</label></p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Gửi yêu cầu đặt hàng</button>
+            <button type="reset">Nhập lại</button>
+        </p>
+    </form>
+    </td></tr>
+    </table>
+
+    <p><a href="index.html">← Về trang chủ</a> | <a href="bang-gia.html">Xem bảng giá</a></p>
+</main>
+
+<footer>
+    <table bgcolor="#27403E" border="0" cellpadding="14" cellspacing="0" width="100%">
+    <tr>
+    <td align="center">
+        <font color="#FFFFFF" size="3"><b>TECHGEAR STORE</b> · © 2026</font><br>
+        <font color="#B4B4B2" size="2">Toàn bộ dữ liệu, giá bán, chính sách và đơn hàng chỉ mang tính minh họa phục vụ học tập.</font><br>
+        <font color="#87DF2C" size="2">24110106 | Hồ Cao Thanh Tiến</font><br>
+        <a href="index.html"><font color="#87DF2C">↑ Quay lại trang chủ</font></a>
+    </td>
+    </tr>
+    </table>
+</footer>
+
+</body>
+</html>
